@@ -23,7 +23,6 @@ class InvoicesController extends Controller
         $database_invoices = $this->getAllInvoicesFromDatabase();
 
         $invoices = $this->transform($database_invoices);
-
         return view('invoices',compact('invoices'));
 //        $data['invoices'] = $invoices;
 //        return view('invoices',$data);
