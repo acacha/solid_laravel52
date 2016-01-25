@@ -152,6 +152,8 @@ return [
 
         Barryvdh\Debugbar\ServiceProvider::class,
 
+        App\Providers\FlashServiceProvider::class,
+
     ],
 
     /*
@@ -205,6 +207,9 @@ return [
          */
         'AdminLTE' => Acacha\AdminLTETemplateLaravel\Facades\AdminLTE::class,
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
+
+//        'Flash' => App\Http\Flash::class
+        'Flash' => App\Facades\Flash::class
 
     ],
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Facades\Flash;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -11,6 +12,7 @@ use Redirect;
 
 class ContactEmailController extends Controller
 {
+//    public function send(Request $request,Flash $flash){
     public function send(Request $request){
 
         //dd(Input::all());
@@ -20,10 +22,14 @@ class ContactEmailController extends Controller
 
         //FLASH NOTIFICATION
 //        $request->session()->flash(
-//            'notification',
+//            'flash_message',
 //            'Email sent!'
 //        );
-        Flash::message("Ok!");
+        Flash::message('Email sent PP!');
+
+//        $flash = app('\App\Http\Flash');
+//
+//        $flash->message("ok");
 
         //REDIRECT WELCOME
         return redirect()->route('welcome');

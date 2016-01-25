@@ -289,16 +289,22 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
     })
 </script>
 <script src="js/all.js"></script>
-<script>
-    {{--{{Session::get('notification')}}--}}
-//    swal("Good job!", "You clicked the button!", "success");
-    swal({
-     title:   "Good job!",
-     text:    "You clicked the button!",
-     type:    "error",
-     confirmButtonText: "Ok!"
-    }
-    )
-</script>
+
+@include('layouts.partials.flashmessage');
+{{--@if(session()->has('flash_message'))--}}
+    {{--<script>--}}
+        {{--{{Session::get('notification')}}--}}
+        {{--//    swal("Good job!", "You clicked the button!", "success");--}}
+        {{--swal({--}}
+                    {{--title:   "Good job!",--}}
+                    {{--text:    "{{Session::get('flash_message')}}",--}}
+                    {{--type:    "error",--}}
+                    {{--confirmButtonText: "Ok!",--}}
+                    {{--timer: 2000,--}}
+                {{--}--}}
+        {{--)--}}
+    {{--</script>--}}
+{{--@endif--}}
+
 </body>
 </html>

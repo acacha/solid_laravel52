@@ -25,6 +25,8 @@
 App::bind(App\Repositories\RepositoryInterface::class,
     App\Repositories\InvoiceRepository::class);
 
+App::bind('Flash',
+    App\Http\Flash::class);
 
 Route::group(['middleware' => ['web']], function () {
 
