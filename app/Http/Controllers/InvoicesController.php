@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Repositories\InvoiceRepository;
-
 use App\Http\Requests;
 use App\Repositories\RepositoryInterface;
+use App\Repositories\UserRepository;
 use Illuminate\Support\Facades\Auth;
 
 class InvoicesController extends Controller
@@ -22,6 +21,7 @@ class InvoicesController extends Controller
      */
     public function __construct(RepositoryInterface $repo)
     {
+
         $this->repo = $repo;
     }
 
@@ -33,8 +33,10 @@ class InvoicesController extends Controller
             return "Forbidden!";
         }
 
-        $invoices = $this->transform(
-            $this->repo->all());
+        $invoices = $this->repo->all();
+
+        $invoices = $this->transform($invoices);
+
         return view('invoices',compact('invoices'));
 //        $data['invoices'] = $invoices;
 //        return view('invoices',$data);

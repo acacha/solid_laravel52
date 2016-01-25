@@ -11,6 +11,7 @@
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -26,14 +27,19 @@ Route::get('/', function () {
 |
 */
 
+App::bind(App\Repositories\RepositoryInterface::class,
+    App\Repositories\UserRepository::class);
+
+
+
 Route::group(['middleware' => ['web']], function () {
     //
     Route::get('/invoices', 'InvoicesController@index');
-});
 
-Route::group(['middleware' => 'web'], function () {
     Route::auth();
 
     Route::get('/home', 'HomeController@index');
 });
+
+
 
