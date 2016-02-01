@@ -50,8 +50,10 @@ Route::group(['middleware' => ['web','pjax']], function () {
     Route::get('apartat3',function() {
         return view('apartat3');
     });
+
 });
 
+include "test-routes.php";
 //Route::post('sendContactEmail','ContactEmailController@send');
 
 
