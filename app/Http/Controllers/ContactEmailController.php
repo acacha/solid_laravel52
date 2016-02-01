@@ -23,7 +23,7 @@ class ContactEmailController extends Controller
      * ContactEmailController constructor.
      * @param $user
      */
-    public function __construct($user)
+    public function __construct(User $user)
     {
         $this->user = $user;
     }
