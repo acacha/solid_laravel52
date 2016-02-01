@@ -11,3 +11,7 @@
       Both of these plugins are recommended to enhance the
       user experience. Slimscroll is required when using the
       fixed layout. -->
+<script src="js/all.js"></script>
+<script>
+    $(document).pjax('a','#pjax-container')
+</script>
