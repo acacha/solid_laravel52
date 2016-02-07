@@ -151,6 +151,8 @@
                             <li class="uncheck">Ducimus facere provident sed.</li>
                         </ul>
                     </div>
+                    <hr>
+                    <div class="pricingtable__price"> 10€/mes</div>
                     <div class="pricingtable__footer pricingtable__footer--color1"><i class="fa fa-credit-card"></i> Buy</div>
                 </div>
             </div>
