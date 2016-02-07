@@ -13,4 +13,10 @@ Route::group(['middleware' => ['web']], function () {
         Debugbar::stopMeasure("SendSubscriptionEmail");
         return 'Done!';
     });
+
+//    Deprecated in 5.2:
+//    Route::controller()
+
+    Route::get('pricingtables/usecase1','PricingTableController@index');
+    Route::get('pricingtables/usecase2','PricingTableController@index2');
 });
